@@ -14,34 +14,31 @@ document.getElementById("loader").style.display = "none";
 
 // DATA TESTIMONI
 
-const testimonials = [
+const testimonials = [];
 
-{
-category:"mobile-legends",
-image:"assets/mobile-legends/ml1.jpg"
-},
-{
-category:"mobile-legends",
-image:"assets/mobile-legends/ml2.jpg"
-},
-{
-category:"roblox",
-image:"assets/roblox/rb1.jpg"
-},
-{
-category:"roblox",
-image:"assets/roblox/rb2.jpg"
-},
-{
-category:"rekber",
-image:"assets/rekber/rk1.jpg"
-},
-{
-category:"rekber",
-image:"assets/rekber/rk2.jpg"
+// Mobile Legends
+for(let i = 1; i <= 1000; i++){
+    testimonials.push({
+        category: "mobile-legends",
+        image: `assets/mobile-legends/ml-${i}.jpg`
+    });
 }
 
-];
+// Roblox
+for(let i = 1; i <= 1000; i++){
+    testimonials.push({
+        category: "roblox",
+        image: `assets/roblox/rb-${i}.jpg`
+    });
+}
+
+// Rekber
+for(let i = 1; i <= 1000; i++){
+    testimonials.push({
+        category: "rekber",
+        image: `assets/rekber/rekber-${i}.jpg`
+    });
+}
 
 const gallery = document.getElementById("gallery");
 
