@@ -63,10 +63,15 @@ currentImages.forEach((item,index)=>{
 const card=document.createElement("div");
 card.className="card";
 
-card.innerHTML=`
-<img src="${item.image}">
-`;
+const img = document.createElement("img");
 
+img.src = item.image;
+
+img.onerror = () => {
+    card.remove();
+};
+
+card.appendChild(img);
 card.addEventListener("click",()=>{
 openLightbox(index);
 });
